@@ -1,0 +1,56 @@
+.error {
+    translate: 55555555555555vh;
+    display: none;
+    transition: translate 0.9s ease-out;
+}
+
+
+.error.active {
+    display: flex;
+    position: fixed;
+    top: 36rem;
+    left: 81vw;
+    background: #df6363;
+    padding: 1rem;
+    font-weight: bold;
+    color: white;
+    user-select: none;
+    border-radius: 5px;
+    translate: 0vh;
+  }
+
+.mars img {
+    box-shadow: 0px 0px 10px rgb(27, 27, 27);
+}
+
+.mars p {
+    margin: 2rem 0.2rem;
+}
+
+.mars button {
+    position: relative;
+    right: 14rem;
+    top: 9rem;
+  }
+
+img:hover,
+img:active {
+    cursor: pointer;
+}
+
+.teori video {
+    position: relative;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+.teori {
+    z-index: 2;
+}

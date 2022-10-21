@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+:root {
+    --black: rgb(36, 34, 34);
+    --white: rgb(247, 243, 243);
+}
+
+body, html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 6.6rem;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 19vh;
+    box-shadow: 0px 0px 2rem;
+    backdrop-filter: blur(3rem);
+}
+
+.main :is(h1) {
+    font-size: 4rem;
+    color: var(--white);
+}
+
+.main :is(h1, p) {
+    font-weight: bold;
+}
+
+
+.main :is(h1)::after {
+    content: '';
+    display: block;
+    width: 7rem;
+    height: 0.5rem;
+    background: linear-gradient(to top, #6e8be1, #3e3b9d);
+    border-radius: 14px;
+    margin: 0px auto;
+  }
+
+.main :is(p) {
+    color: var(--white);
+}
+
+nav {
+    background-color: var(--black);
+    padding: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    right: 1.7rem;
+  }
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    transition: all 480ms;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+    color: gray;
+}
+
+nav img {
+    width: 4.5rem;
+    position: absolute;
+    left: 1rem;
+    top: 0.2rem;
+   
+  }
+
+#button {
+    position: absolute;
+    width: 4rem;
+    top: 0.8rem;
+    right: 1rem;
+    border-radius: 100%;
+    display: none;
+    cursor: pointer;
+  }
+
+@media screen and (max-width: 632px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        display: none;
+    } 
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav {
+        padding: 3rem;
+    }
+
+    nav img {
+        top: 1rem;
+    }
+
+    #button {
+        display: block;
+    }
+}
+
+.loading {
+    background-image: url(../img/bg.jpg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999999999999999999999999999999;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading h1 {
+    font-weight: bold;
+    font-size: 4.5rem;
+    background: linear-gradient(to top, #8c8787,#807474 ,#9b8888);
+      background-clip: border-box;
+    color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+
+.loading.active {
+    display: none;
+}
+
+footer {
+    margin-top: 5rem;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+  .links a {
+    text-decoration: none;
+    color: rgb(118, 118, 252);
+    font-weight: bold;
+    transition: all 0.4s;
+  }
+
+@media screen and (max-width: 434px) {
+    .links {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.container::after {
+    content: '';
+    display: block;
+    width: 19rem;
+    background: linear-gradient(to left, #a2a2a2 ,#716c6c);
+    height: 0.222rem;
+    border-radius: 119vh;
+    margin: 2rem auto;
+  }
+
+.links > a:hover,
+.links > a:active {
+    text-decoration: underline;
+}
+strong {
+    color: rgb(50, 146, 170);
+    font-weight: normal;
+}
+
+.mars {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+
+  .mars button {
+    border: 0;
+    height: 3.8rem;
+    width: 7.5rem;
+    padding: 1rem;
+    outline: none;
+    font-weight: bold;
+    border-radius: 8px;
+    color: var(--white);
+    transition: box-shadow 0.5s;
+    background: linear-gradient(
+        to top,
+        rgb(44, 63, 240),
+        rgb(78, 103, 214),
+        rgb(10, 85, 184),
+        rgb(7, 109, 156)
+    );
+  }
+
+  .mars :is(button):hover,
+  .mars :is(button):active {
+    box-shadow: 0px 0px 5px rgb(12, 78, 175);
+  }
+
+.mars img {
+    width: 51vw;
+    border: none;
+    border-radius: 15px;
+  }
+
+@media screen and (max-width: 862px) {
+    .mars {
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 2vw;
+    }
+
+    .mars img {
+        width: 51vw;
+        border: none;
+        border-radius: 15px;
+        justify-content: center;
+        display: block;
+        margin: 0px auto;
+      }
+
+    .mars p {
+        text-align: center;
+    }
+}
+
+br {
+    user-select: none;
+}
